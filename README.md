@@ -1,0 +1,2 @@
+# VirtualCofeeClient
+client for VirtualCofeeServer
