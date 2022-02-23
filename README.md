@@ -22,7 +22,7 @@ is an RPC server using soap web service implemented in java to find common slots
   <li>cd to VirtualCofeeClient folder</li>
   <li>cd to src\main\java</li>
   <li>wsimport -keep -verbose "http://localhost:7779/ws/coffee?wsdl"</li>
-  #where <strong>localhost</strong> is the hostname or ipaddress configured for the server
+  #where <strong>localhost</strong> is the hostname or ipaddress configured for the server (the server must be up and running)
   <li>cd back to VirtualCofeeClient folder</li>
 //compile and run the application
   <li>mvn clean install</li> 
