@@ -94,7 +94,7 @@ public class VirtualCoffeeClient {
     private static boolean validateOffsetOption(Options options, CommandLine cmd, boolean error) {
         if(cmd.hasOption(OFFSET_OPTION)) {
 
-            if (cmd.getOptionValue(OFFSET_OPTION).matches("(((gmt|GMT)(\\+|-)([1-24]))|(gmt|GMT))")) {
+            if (cmd.getOptionValue(OFFSET_OPTION).matches("(((gmt|GMT)(\\+|-)(([0-2]?)[1-9]))|(gmt|GMT))")) {
                 offset = cmd.getOptionValue(OFFSET_OPTION);
             } else {
                 // error
@@ -113,7 +113,7 @@ public class VirtualCoffeeClient {
     private static boolean validateEndOption(Options options, CommandLine cmd, boolean error) {
         if(cmd.hasOption(END_OPTION)) {
 
-            if (cmd.getOptionValue(END_OPTION).matches("[1-2]?[0-9](am|pm)")) {
+            if (cmd.getOptionValue(END_OPTION).matches("[0-2]?[0-9](am|pm)")) {
                 end = cmd.getOptionValue(END_OPTION);
             } else {
                 // error
